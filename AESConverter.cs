@@ -64,7 +64,7 @@ namespace AESconverter
                 throw new ArgumentNullException("IV");
             }
 
-            string plaintext = null;
+            string? plaintext = null;
 
             using (Aes aesAlg = Aes.Create())
             {

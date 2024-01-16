@@ -119,7 +119,6 @@
             convertedLabel.Size = new Size(82, 20);
             convertedLabel.TabIndex = 7;
             convertedLabel.Text = "변환 후 값:";
-            convertedLabel.Click += label3_Click;
             // 
             // valueLavel
             // 
@@ -196,7 +195,6 @@
             viewFilePage.TabIndex = 1;
             viewFilePage.Text = "파일 조회";
             viewFilePage.UseVisualStyleBackColor = true;
-            viewFilePage.Click += tabPage2_Click;
             // 
             // v_saveFileButton
             // 
@@ -228,7 +226,6 @@
             v_codeField.ScrollBars = ScrollBars.Vertical;
             v_codeField.Size = new Size(918, 499);
             v_codeField.TabIndex = 0;
-            v_codeField.TextChanged += textBox5_TextChanged;
             // 
             // createFilePage
             // 

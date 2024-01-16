@@ -10,21 +10,6 @@ namespace AESconverter
             InitializeComponent();
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void codeButton_Click(object sender, EventArgs e)
         {
             byte[] key = AESConverter.Padding(System.Text.Encoding.UTF8.GetBytes(keyField.Text), 32);
