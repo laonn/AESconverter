@@ -112,7 +112,7 @@ namespace AESconverter
 
             return result;
         }
-        static public string GetIV() //16자리 숫자 문자열 
+        static public string GetIV()
         {
             Random random = new Random();
             return random.NextInt64().ToString()[..16];
