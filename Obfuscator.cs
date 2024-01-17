@@ -25,6 +25,8 @@ namespace AESconverter
             process.Start();
             process.WaitForExit();
 
+            int exitCode = process.ExitCode;
+
             return process.StandardOutput.ReadToEnd();
         }
 

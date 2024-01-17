@@ -43,11 +43,11 @@
             keyField = new TextBox();
             viewFilePage = new TabPage();
             v_saveFileButton = new Button();
-            openFileButton = new Button();
+            v_openFileButton = new Button();
             v_codeField = new TextBox();
             createFilePage = new TabPage();
             c_saveFileButton = new Button();
-            c_addFileButton = new Button();
+            c_openFileButton = new Button();
             c_codeField = new TextBox();
             tabControl.SuspendLayout();
             convertingPage.SuspendLayout();
@@ -196,7 +196,7 @@
             // 
             viewFilePage.AllowDrop = true;
             viewFilePage.Controls.Add(v_saveFileButton);
-            viewFilePage.Controls.Add(openFileButton);
+            viewFilePage.Controls.Add(v_openFileButton);
             viewFilePage.Controls.Add(v_codeField);
             viewFilePage.Location = new Point(4, 34);
             viewFilePage.Margin = new Padding(3, 2, 3, 2);
@@ -218,16 +218,16 @@
             v_saveFileButton.UseVisualStyleBackColor = true;
             v_saveFileButton.Click += v_saveFileButton_Click;
             // 
-            // openFileButton
+            // v_openFileButton
             // 
-            openFileButton.Location = new Point(1084, 48);
-            openFileButton.Margin = new Padding(3, 2, 3, 2);
-            openFileButton.Name = "openFileButton";
-            openFileButton.Size = new Size(112, 34);
-            openFileButton.TabIndex = 1;
-            openFileButton.Text = "파일 열기";
-            openFileButton.UseVisualStyleBackColor = true;
-            openFileButton.Click += openFileButton_Click;
+            v_openFileButton.Location = new Point(1084, 48);
+            v_openFileButton.Margin = new Padding(3, 2, 3, 2);
+            v_openFileButton.Name = "v_openFileButton";
+            v_openFileButton.Size = new Size(112, 34);
+            v_openFileButton.TabIndex = 1;
+            v_openFileButton.Text = "파일 열기";
+            v_openFileButton.UseVisualStyleBackColor = true;
+            v_openFileButton.Click += openFileButton_Click;
             // 
             // v_codeField
             // 
@@ -244,7 +244,7 @@
             // 
             createFilePage.AllowDrop = true;
             createFilePage.Controls.Add(c_saveFileButton);
-            createFilePage.Controls.Add(c_addFileButton);
+            createFilePage.Controls.Add(c_openFileButton);
             createFilePage.Controls.Add(c_codeField);
             createFilePage.Location = new Point(4, 34);
             createFilePage.Margin = new Padding(3, 2, 3, 2);
@@ -266,16 +266,16 @@
             c_saveFileButton.UseVisualStyleBackColor = true;
             c_saveFileButton.Click += c_saveFileButton_Click;
             // 
-            // c_addFileButton
+            // c_openFileButton
             // 
-            c_addFileButton.Location = new Point(1084, 48);
-            c_addFileButton.Margin = new Padding(3, 2, 3, 2);
-            c_addFileButton.Name = "c_addFileButton";
-            c_addFileButton.Size = new Size(112, 34);
-            c_addFileButton.TabIndex = 2;
-            c_addFileButton.Text = "파일 열기";
-            c_addFileButton.UseVisualStyleBackColor = true;
-            c_addFileButton.Click += c_addFileButton_Click;
+            c_openFileButton.Location = new Point(1084, 48);
+            c_openFileButton.Margin = new Padding(3, 2, 3, 2);
+            c_openFileButton.Name = "c_openFileButton";
+            c_openFileButton.Size = new Size(112, 34);
+            c_openFileButton.TabIndex = 2;
+            c_openFileButton.Text = "파일 열기";
+            c_openFileButton.UseVisualStyleBackColor = true;
+            c_openFileButton.Click += c_addFileButton_Click;
             // 
             // c_codeField
             // 
@@ -326,9 +326,9 @@
         private TextBox v_codeField;
         private TextBox c_codeField;
         private Button v_saveFileButton;
-        private Button openFileButton;
+        private Button v_openFileButton;
         private Button c_saveFileButton;
-        private Button c_addFileButton;
+        private Button c_openFileButton;
         private Button getIVButton;
     }
 }
