@@ -21,7 +21,7 @@ namespace AESconverter
             process.StartInfo.FileName = luajitPath;
             process.StartInfo.Arguments = path;
             process.StartInfo.RedirectStandardOutput = true;
-            
+
             process.Start();
             process.WaitForExit();
 
@@ -53,11 +53,6 @@ namespace AESconverter
 
             process.WaitForExit();
             process.Close();
-        }
-
-        public static string ViewInfo(string path)
-        {
-            return "";
         }
     }
 }

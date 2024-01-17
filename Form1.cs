@@ -1,4 +1,4 @@
-using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -59,7 +59,7 @@ namespace AESconverter
 
                     if (files is not null)
                     {
-                        MessageBox.Show(files[0]);
+                        v_codeField.Text = Obfuscator.Obfuscate(files[0]);
                     }
                 }
             }
@@ -122,6 +122,31 @@ namespace AESconverter
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
                     Obfuscator.GetByteCode(folderBrowserDialog.SelectedPath);
+                }
+            }
+        }
+
+        private void openFileButton_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    v_codeField.Text = Obfuscator.Obfuscate(openFileDialog.FileName);
+                }
+            }
+        }
+
+        private void v_saveFileButton_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+            {
+                if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                {
+                    using (FileStream fileStream = File.Create(folderBrowserDialog.SelectedPath + "\\ITSME"))
+                    {
+                        fileStream.Write(System.Text.Encoding.UTF8.GetBytes(v_codeField.Text), 0, v_codeField.TextLength);
+                    }
                 }
             }
         }

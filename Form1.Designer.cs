@@ -216,6 +216,7 @@
             v_saveFileButton.TabIndex = 2;
             v_saveFileButton.Text = "파일 저장";
             v_saveFileButton.UseVisualStyleBackColor = true;
+            v_saveFileButton.Click += v_saveFileButton_Click;
             // 
             // openFileButton
             // 
@@ -226,6 +227,7 @@
             openFileButton.TabIndex = 1;
             openFileButton.Text = "파일 열기";
             openFileButton.UseVisualStyleBackColor = true;
+            openFileButton.Click += openFileButton_Click;
             // 
             // v_codeField
             // 
