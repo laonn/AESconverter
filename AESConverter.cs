@@ -91,11 +91,11 @@ namespace AESconverter
         {
             byte[] result = new byte[length];
 
-            if(origin.Length > 32)
+            if(origin.Length > length)
             {
                 throw new Exception("키값이 너무 길어요.");
             }
-            else if(origin.Length < 32)
+            else if(origin.Length < length)
             {
                 Array.Copy(origin, result, origin.Length);
                 byte padding = (byte)((length - origin.Length) % 8);
