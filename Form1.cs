@@ -16,7 +16,7 @@ namespace AESconverter
             viewFilePage.DragDrop += new DragEventHandler(v_DragAndDrop);
             viewFilePage.DragEnter += new DragEventHandler(v_DragAndEnter);
 
-            MessageBox.Show("safd");
+            MessageBox.Show("123");
         }
 
         private void c_DragAndDrop(object? sender, DragEventArgs e)
