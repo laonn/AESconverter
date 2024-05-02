@@ -15,6 +15,8 @@ namespace AESconverter
 
             viewFilePage.DragDrop += new DragEventHandler(v_DragAndDrop);
             viewFilePage.DragEnter += new DragEventHandler(v_DragAndEnter);
+
+            //깃허브 테스트
         }
 
         private void c_DragAndDrop(object? sender, DragEventArgs e)
